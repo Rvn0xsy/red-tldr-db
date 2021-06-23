@@ -1,1 +1,1 @@
-{"data":[{"name":"mimikatz","tags":["mimikatz","mimi2"],"file":"mimikatz.yaml"},{"name":"sqlmap","tags":["sqlmap","sql","123"],"file":"sqlmap-.yaml"},{"name":"sqlmap","tags":["sqlmap","sql","123"],"file":"sqlmap.yaml"}]}
+{"data":[{"name":"mimikatz","tags":["mimikatz","mimi"],"file":"mimikatz.yaml"},{"name":"procdump","tags":["procdump","proc"],"file":"procdump.yaml"},{"name":"sqlmap","tags":["sqlmap","sql","123"],"file":"sqlmap-.yaml"},{"name":"sqlmap","tags":["sqlmap","sql","123"],"file":"sqlmap.yaml"}]}

