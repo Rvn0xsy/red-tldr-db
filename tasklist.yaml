@@ -1,0 +1,35 @@
+name: tasklist
+tags: [tasklist,task]
+data: |
+
+
+  # 列出当前正在运行的系统进程
+  tasklist /fi "USERNAME ne NT AUTHORITY\SYSTEM" /fi "STATUS eq running"
+
+  # 进程 ID 大于 1000 的所有任务并将其显示为 csv 格式
+  tasklist /v /fi "PID gt 1000" /fo csv
+
+  # 列出lsass.exe的 PID
+  tasklist /fi "IMAGENAME eq lsass.exe" /fo list
+
+  # 列出远程计算机上的进程列表
+  tasklist /s <SERVER> /u Domain\user /p P@ssw0rd
+
+
+
+  /fo {table | list | csv}	指定要用于输出的格式。 有效值为 table、 list 和 csv。 输出的默认格式为 table。
+  /fi 筛选器表达式
+
+  筛选器名称	有效的运算符	有效值 (s)
+  STATUS	eq、ne	RUNNING | NOT RESPONDING | UNKNOWN. 如果指定远程系统，则不支持此筛选器。
+  IMAGENAME	eq、ne	映像名称
+  PID	eq、ne、gt、lt、ge、le	PID 值
+  SESSION	eq、ne、gt、lt、ge、le	会话号
+  SESSIONNAME	eq、ne	“会话名称”
+  CPUtime	eq、ne、gt、lt、ge、le	采用 HH： MM： SS 格式的 CPU 时间，其中 MM 和 SS 介于0到59之间， HH 是任意无符号数字
+  MEMUSAGE	eq、ne、gt、lt、ge、le	内存使用量（KB）
+  USERNAME	eq、ne	任何有效用户名 (<user> 或 <domain\user>)
+  SERVICES	eq、ne	服务名称
+  WINDOWTITLE	eq、ne	窗口标题。 如果指定远程系统，则不支持此筛选器。
+  MODULES	eq、ne	DLL 名称
+  
