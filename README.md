@@ -19,6 +19,6 @@ $ git clone https://gthub.com/Rvn0xsy/red-tldr-db ~/red-tldr-db/
 red-tldr is a free and open source project, and we welcome anyone to contribute to its development and progress.
 
 - Take a look at our [issues](https://github.com/Rvn0xsy/red-tldr-db/issues) list and consider sending a [Pull Request](https://github.com/Rvn0xsy/red-tldr-db/pulls) to dev branch.
-- If you want to add a new feature, please create an [issues](https://github.com/Rvn0xsy/red-tldr-db/issues) first to describe the new feature, as well as the implementation approach. Once a proposal is accepted, create an implementation of the new features and submit it as a [pull request][Pull Request](https://github.com/Rvn0xsy/red-tldr-db/pulls).
+- If you want to add a new feature, please create an [issues](https://github.com/Rvn0xsy/red-tldr-db/issues) first to describe the new feature, as well as the implementation approach. Once a proposal is accepted, create an implementation of the new features and submit it as a [Pull Request](https://github.com/Rvn0xsy/red-tldr-db/pulls).
 - Sorry for my poor English. Improvements for this document are welcome, even some typo fixes.
 - If you have great ideas, send an email to rvn0xsy@gmail.com.
