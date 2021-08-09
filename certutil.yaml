@@ -1,0 +1,15 @@
+name: certutil
+tags: [certutil,cert,encode,decode,download]
+data: |
+
+  # Base64 Encode
+
+  certutil -encode inFileName OutFileName
+
+  # Base64 Decode
+
+  ceruttil -decode inFileName outFileName
+
+  # Download File
+
+  certutil -urlcache -f -split http://url/file C:\Windows\Temp\download.file
