@@ -1,0 +1,14 @@
+name: useradd
+tags: [useradd,adduser,linux]
+data: |
+
+  # 添加root用户
+
+  useradd abc && echo "123456" | passwd --stdin abc
+
+  usermod -g root abc
+
+  chmod 0440 /etc/sudoers
+  
+  echo "abc ALL=(ALL:ALL) ALL" >> /etc/sudoers
+
