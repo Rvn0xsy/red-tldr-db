@@ -4,15 +4,19 @@ data: |
 
 
   # 列出当前正在运行的系统进程
+
   tasklist /fi "USERNAME ne NT AUTHORITY\SYSTEM" /fi "STATUS eq running"
 
   # 进程 ID 大于 1000 的所有任务并将其显示为 csv 格式
+
   tasklist /v /fi "PID gt 1000" /fo csv
 
   # 列出lsass.exe的 PID
+
   tasklist /fi "IMAGENAME eq lsass.exe" /fo list
 
   # 列出远程计算机上的进程列表
+
   tasklist /s <SERVER> /u Domain\user /p P@ssw0rd
 
 

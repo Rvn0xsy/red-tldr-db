@@ -12,19 +12,19 @@ data: |
   - listenport - 本地侦听TCP端口。
   - connectaddress - 将传入连接重定向到本地或远程IP地址（或DNS名称）。
   
-  重要：请确保防火墙（Windows防火墙或通常包含在杀毒软件中的第三方防火墙）允许到新端口的传入连接。 如有必要，可以使用以下命令添加新的Windows防火墙规则：
+    # 重要：请确保防火墙（Windows防火墙或通常包含在杀毒软件中的第三方防火墙）允许到新端口的传入连接。 如有必要，可以使用以下命令添加新的Windows防火墙规则：
 
 
   netsh advfirewall firewall add rule name=”forwarded_RDPport_3340” protocol=TCP dir=in localip=10.1.1.110  localport=3340 action=allow
 
-  显示系统中的转发规则列表：
+  # 显示系统中的转发规则列表：
 
   netsh interface portproxy show all
 
-  删除指定的端口转发规则：
+  # 删除指定的端口转发规则：
 
   netsh interface portproxy delete v4tov4 listenport=3340 listenaddress=10.1.1.110
 
-  除所有当前的端口转发规则：
+  # 除所有当前的端口转发规则：
 
   netsh interface portproxy reset

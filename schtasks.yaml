@@ -3,22 +3,22 @@ tags: [schtasks,sch]
 data: |
 
   # 创建任务计划 - 每20分钟运行一次
-  下面的命令计划C:\Windows\program.exe每 20 分钟运行一次。由于命令没有包含起始日期或时间，任务在命令完成 20 分钟后启动，此后每当系统运行它就每 20 分钟运行一次。
+  # 下面的命令计划C:\Windows\program.exe每 20 分钟运行一次。由于命令没有包含起始日期或时间，任务在命令完成 20 分钟后启动，此后每当系统运行它就每 20 分钟运行一次。
   
   schtasks /create /sc minute /mo 20 /tn "Security scrīpt" /tr C:\Windows\program.exe
 
   # 在指定时间执行
-  下面的命令计划C:\Windows\program.exe在02点17分以SYSTEM权限执行一次。
+  # 下面的命令计划C:\Windows\program.exe在02点17分以SYSTEM权限执行一次。
   
   schtasks /create /sc once /st 02:17 /tn Program /tr "C:\Windows\program.exe" /ru system
 
   # 每小时过五分的时候运行
-  下面的命令将计划 MyApp 程序从午夜过后五分钟起每小时运行一次。因为忽略了/mo参数，命令使用了小时计划的默认值，即每 (1) 小时。如果该命令在 12:05 A.M 之后生成，程序将在第二天才会运行。
+  # 下面的命令将计划 MyApp 程序从午夜过后五分钟起每小时运行一次。因为忽略了/mo参数，命令使用了小时计划的默认值，即每 (1) 小时。如果该命令在 12:05 A.M 之后生成，程序将在第二天才会运行。
   
   schtasks /create /sc hourly /st 00:05:00 /tn "My App" /tr C:\Windows\program.exe
 
   # 计划命令每五小时运行一次
-  下面的命令计划 MyApp 程序从 2001 年 3 月的第一天起每五小时运行一次。它使用/mo参数来指定间隔时间，使用/sd参数来指定起始日期。由于命令没有指定起始时间，当前时间被用作起始时间。
+  # 下面的命令计划 MyApp 程序从 2001 年 3 月的第一天起每五小时运行一次。它使用/mo参数来指定间隔时间，使用/sd参数来指定起始日期。由于命令没有指定起始时间，当前时间被用作起始时间。
   
   schtasks /create /sc hourly /mo 5 /sd 03/01/2001 /tn "My App" /tr c:\apps\myapp.exe
 
@@ -27,9 +27,11 @@ data: |
   schtasks /query /tn "\Microsoft\Windows\AppID\VerifiedPublisherCertStoreCheck" /FO LIST /V
 
   # 删除计划任务
+  
   schtasks /delete /tn "My App"
 
   # 禁用计划任务
+  
   schtasks /change /tn "My App" /disable
 
-  无法加载列资源可以通过chcp 65001 ，改变页面编码解决
+  # 无法加载列资源可以通过chcp 65001 ，改变页面编码解决
