@@ -1,0 +1,30 @@
+name: forfiles
+tags: [forfiles,forfile,for]
+data: |
+
+  @FILE	文件名。
+  @FNAME	不带扩展名的文件名。
+  @EXT	文件扩展名。
+  @PATH	文件的完整路径。
+  @RELPATH	文件的相对路径。
+  @ISDIR	如果文件类型为目录，则计算结果为 TRUE。 否则，此变量的计算结果为 FALSE。
+  @FSIZE	文件大小（以字节为单位）。
+  @FDATE	文件中上次修改的日期戳。
+  @FTIME	文件中上次修改的时间戳。
+
+  # 列出驱动器D上的某个文件所在绝对路径
+  
+  forfiles /P D:\ /S /M logo.png /C "cmd /c echo @path"
+
+  # 列出驱动器 C 上的所有批处理文件
+
+  forfiles /P c:\ /S /M *.bat /C "cmd /c echo @file is a batch file"
+
+  # 列出驱动器 C 上的所有目录
+
+  forfiles /P c:\ /S /M * /C "cmd /c if @isdir==TRUE echo @file is a directory"
+
+  # 列出当前目录中早于2007年1月1日的每个文件
+
+  forfiles /S /M *.* /D -01/01/2007 /C "cmd /c echo @file is outdated."
+

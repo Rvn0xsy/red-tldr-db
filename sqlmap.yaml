@@ -1,0 +1,19 @@
+name: sqlmap
+tags: [sqlmap,sql]
+data: |
+
+  # 随机Agent头
+  sqlmap --random-agent -u "http://sql-inject.example.com/?id=1"
+
+  # 检测技术
+
+  B: Boolean-based blind
+  E: Error-based
+  U: Union query-based
+  S: Stacked queries
+  T: Time-based blind
+  Q: Inline queries
+
+  --technique BEUSTQ
+
+  sqlmap --random-agent --technique E -u "http://sql-inject.example.com/?id=1"

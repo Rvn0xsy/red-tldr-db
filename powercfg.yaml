@@ -1,0 +1,7 @@
+name: powercfg
+tags: [power,powercfg]
+data: |
+
+  # 关闭计算机休眠模式
+
+  powercfg -h off
