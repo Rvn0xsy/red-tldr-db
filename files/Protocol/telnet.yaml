@@ -1,0 +1,10 @@
+name:  telnet 
+tags: [telnet, 23]
+data: |
+  plateform/linux  #target/remote  #protocol/telnet #port/23
+  
+  nmap - telnet
+  cat/RECON 
+  ```
+  nmap -n -sV -Pn --script "*telnet* and safe" -p 23 <ip>
+  ```

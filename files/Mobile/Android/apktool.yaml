@@ -1,0 +1,11 @@
+name:  apktool
+tags: [android, reverse, jadx]
+data: |
+  plateform/linux #target/local #cat/ANDROID
+  Decompress an app 
+  apktool d <apk>
+  
+  
+  Build an app 
+  apktool b <apk>
+  

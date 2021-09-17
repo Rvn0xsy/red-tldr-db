@@ -1,0 +1,14 @@
+name:  powershell
+tags: [powershell]
+data: |
+  
+  Get file in trash
+  ```
+  Get-ADObject -filter 'isDeleted -eq $true -and name -ne "Deleted Objects"' -includeDeletedObjects -property *
+  ```
+  
+  Get process
+  ```
+  Get-Process
+  ```
+  

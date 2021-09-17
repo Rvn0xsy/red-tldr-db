@@ -1,0 +1,11 @@
+name:  netbios
+tags: [netbios, scan, nbtscan]
+data: |
+  plateform/linux  #target/remote  #protocol/netbios
+  nbtscan - netbios scan
+  cat/RECON 
+  ```
+  nbtscan -r <ip_range>
+  ```
+  
+  
