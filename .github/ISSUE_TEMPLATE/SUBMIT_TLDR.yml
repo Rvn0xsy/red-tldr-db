@@ -22,7 +22,19 @@ body:
           ```"
       value: |
         ```yaml
-        
+        name:  yum
+        tags: [yum]
+        data: |
+          plateform/linux #target/local  #cat/UTILS 
+          
+          List all available packages
+          ```
+          yum list available
+          ```
+          
+          List all installed packages
+          ```
+          yum list installed
         ```
     validations:
       required: true
