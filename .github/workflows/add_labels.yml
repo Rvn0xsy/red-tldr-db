@@ -33,14 +33,14 @@ jobs:
         if: steps.issue_helper.outputs.changes > 0
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.REDTLDR_TOKEN }}
           branch: ${{ github.ref }}
 
       - name: Create Pending Review Comment
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'create-comment,close-issue'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.REDTLDR_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
           body: |
             ## 审核通过:
