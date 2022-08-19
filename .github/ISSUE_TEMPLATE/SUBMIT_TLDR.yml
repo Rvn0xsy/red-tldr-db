@@ -1,6 +1,6 @@
-name: 提交指纹
-description: 提交指纹
-title: "提交指纹-[全英文组件名称]"
+name: 提交文档
+description: 提交文档
+title: "提交文档-[全英文名称]"
 labels: [submit-red-tldr-db]
 assignees:
   - rvn0xsy
