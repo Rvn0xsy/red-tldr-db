@@ -9,6 +9,7 @@ ISSUE_BODY = issue.get("body", "")
 LABEL = PAYLOAD.get("label", {}).get("name")
 SENDER = PAYLOAD.get("sender", {}).get("login", "")
 ISSUE_TITLE = issue.get("title", "")
+ACTION = PAYLOAD.get("action")
 
 def get_string_between(o_string, start, end):
     if start in o_string and end in o_string:
@@ -20,7 +21,7 @@ def get_string_between(o_string, start, end):
 def create_file(name):
     yaml_data = get_string_between(ISSUE_BODY, "```yaml", "```").strip()
     base_path = Path("files/New").resolve()
-    n = Path("web_fingerprint/").joinpath(name).with_suffix(".yaml").resolve()
+    n = Path("files/New/").joinpath(name).with_suffix(".yaml").resolve()
     if n.parent == base_path:
         with open(n, "w") as y:
             y.write(yaml_data)
@@ -31,3 +32,6 @@ def runner():
     if ACTION == "labeled" and LABEL == "Reviewed" and SENDER == "rvn0xsy":
         doc_name = get_string_between(ISSUE_TITLE, "[", "]")
         create_file(doc_name)
+
+if __name__ == "__main__":
+    runner()
