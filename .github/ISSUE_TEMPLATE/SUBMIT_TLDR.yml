@@ -1,0 +1,33 @@
+name: 提交指纹
+description: 提交指纹
+title: "提交指纹-[全英文组件名称]"
+labels: [submit-red-tldr-db]
+assignees:
+  - rvn0xsy
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请按照提示提交文档内容：
+  - type: textarea
+    id: yaml_data
+    attributes:
+      label: red-tldr-db
+      description: TLDR 文档内容，tags不建议超过3个
+      placeholder: "
+        name: yum
+        tags: [yum]
+        data: |
+          plateform/linux #target/local  #cat/UTILS 
+          
+          List all available packages
+          ```
+          yum list available
+          ```"
+      value: |
+        ```yaml
+        
+        ```
+    validations:
+      required: true
+
