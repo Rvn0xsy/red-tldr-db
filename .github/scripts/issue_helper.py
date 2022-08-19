@@ -29,7 +29,7 @@ def create_file(name):
 
 def runner():
     # 打标签，已经测试，已经审核,判断发起人，不是管理员取消标签
-    if ACTION == "labeled" and LABEL == "Reviewed" and SENDER == "rvn0xsy":
+    if ACTION == "labeled" and LABEL == "Reviewed" and SENDER == "Rvn0xsy":
         doc_name = get_string_between(ISSUE_TITLE, "[", "]")
         create_file(doc_name)
 
