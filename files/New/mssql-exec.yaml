@@ -1,0 +1,6 @@
+name:  mssql-exec
+tags: [mssql,xpcmdshell,exec]
+data: |
+  plateform/windows #target/local
+  
+  SQL Server xpcmdshell
