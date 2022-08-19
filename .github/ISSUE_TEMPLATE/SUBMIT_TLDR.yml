@@ -35,6 +35,7 @@ body:
           List all installed packages
           ```
           yum list installed
+          ```
         ```
     validations:
       required: true
