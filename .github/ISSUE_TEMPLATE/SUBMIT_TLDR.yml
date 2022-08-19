@@ -5,15 +5,11 @@ labels: [submit-red-tldr-db]
 assignees:
   - rvn0xsy
 body:
-  - type: markdown
-    attributes:
-      value: |
-        请按照提示提交文档内容：
   - type: textarea
     id: yaml_data
     attributes:
-      label: red-tldr-db
-      description: TLDR 文档内容，tags不建议超过3个
+      label: 文档内容
+      description: TLDR 文档内容，tags不建议超过3个，注意缩进
       placeholder: "
         name: yum
         tags: [yum]
