@@ -14,7 +14,7 @@ ACTION = PAYLOAD.get("action")
 def get_string_between(o_string, start, end):
     if start in o_string and end in o_string:
         s = o_string.index(start) + len(start)
-        e = o_string.index(end, s)
+        e = o_string.rindex(end, s)
         return o_string[s:e]
     exit(1)
 
