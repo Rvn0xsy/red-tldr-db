@@ -1,5 +1,5 @@
 name:  mssql-exec-elevation
-tags: [mssql,xpcmdshell,potato]
+tags: [mssql,potato,exec]
 data: |
   plateform/windows #target/local
   
